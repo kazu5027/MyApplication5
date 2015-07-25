@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/steps"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/whitecircle" />
+
+    <ImageView
+        android:id="@+id/calo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@+id/steps"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@mipmap/whitecircle" />
+
+    <ImageView
+        android:id="@+id/meal"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignStart="@+id/calo"
+        android:layout_below="@+id/calo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:scaleType="fitStart" />
+
+
+    <TextView
+        android:id="@+id/stepsCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:maxLength="5"
+        android:text="0"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/caloCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/calo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="0"
+        android:maxLength="4"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stepsCount"
+        android:layout_centerHorizontal="true"
+        android:text="steps"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/calo"
+        android:layout_below="@+id/caloCount"
+        android:layout_centerHorizontal="true"
+        android:text="kcal"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/reset"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignBottom="@+id/steps"
+        android:layout_alignTop="@+id/stepsCount"
+        android:layout_marginTop="40dp"
+        android:background="@null"
+        android:scaleType="fitStart"
+        android:src="@mipmap/kanaria" />
+
+    <net.nend.android.NendAdView
+        android:id="@+id/nend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        NendApiKey="c14672b54bd4120c41ee2a764e61324283746d39"
+        NendSpotId="410339" />
+
+</RelativeLayout>
